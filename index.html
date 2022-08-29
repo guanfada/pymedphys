@@ -301,6 +301,11 @@ const thebe_selector_output = ".output, .cell_output"
        TRF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="users/ref/lib/electronfactors.html">
+       Electron Cutout Factors
+      </a>
+     </li>
      <li class="toctree-l3 has-children">
       <a class="reference internal" href="users/ref/lib/experimental/index.html">
        Experimental Modules
@@ -689,6 +694,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development">
+   Development
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#our-team">
    Our Team
   </a>
@@ -751,6 +761,11 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#documentation">
    Documentation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development">
+   Development
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -824,19 +839,31 @@ know you!</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pymedphys<span class="o">[</span>user<span class="o">]</span>
 </pre></div>
 </div>
-<p>If you’d like more details around installing PyMedPhys go to the
-<a class="reference external" href="getting-started.html">getting started</a> page within the docs.</p>
-<p>The PyMedPhys documentation is split into four categories:</p>
+<p>Further user installation instructions can be found in the <a class="reference external" href="users/get-started/quick-start.html">Quick Start Guide</a>.</p>
+<p>The PyMedPhys documentation contains two overarching guides:</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="lib/index.html">Library Users Guide</a>: for those building their own Python apps, scripts
-and other tools who wish to incorporate elements of the PyMedPhys library.</p></li>
-<li><p><a class="reference external" href="cli/index.html">CLI Users Guide</a>: for those who wish to use PyMedPhys’ ready-made command
-line interface (e.g. to help automate existing workflows with minimal
-programming).</p></li>
-<li><p><a class="reference external" href="contrib/index.html">Contributors Guide</a>: for those who wish to make new contributions to
-either the PyMedPhys library or the PyMedPhys app.</p></li>
-<li><p><a class="reference external" href="general/index.html">General</a>: Material that may apply to any visitor to PyMedPhys.</p></li>
+<li><p><strong>The Users Guide</strong>: where you can find instructions to <a class="reference external" href="users/get-started/index.html">get started</a> with
+the library and the CLI, in-depth <a class="reference external" href="users/howto/index.html">how-to guides</a> (examples for users) on PyMedPhys’ various
+tools, some <a class="reference external" href="users/background/index.html">background information</a> on individual PyMedPhys projects as
+well as the <a class="reference external" href="users/ref/index.html">Technical Reference</a>.</p></li>
+<li><p><strong>The Contributors Guide</strong>: for those who wish to make new contributions
+to the PyMedPhys library, CLI or app. Here you’ll find detailed <a class="reference external" href="contrib/setups/index.html">workstation
+setup guides</a> to enable contributions, important <a class="reference external" href="contrib/info/index.html">repository information</a>,
+and some <a class="reference external" href="contrib/tips/index.html">tips &amp; tricks</a> to overcome common issues.</p></li>
 </ol>
+</section>
+<section id="development">
+<h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">#</a></h1>
+<p>The PyMedPhys project is managed using <a href="#id1"><span class="problematic" id="id2">`Poetry`_</span></a>.</p>
+<p>After cloning the repository, install the PyMedPhys dependencies and set up pre-commit by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry install -E all
+poetry run pre-commit install
+</pre></div>
+</div>
+<p>Run automated tests with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry run pymedphys dev tests
+</pre></div>
+</div>
 </section>
 <section id="our-team">
 <h1>Our Team<a class="headerlink" href="#our-team" title="Permalink to this headline">#</a></h1>
@@ -908,6 +935,15 @@ past and present. Here is our team.</p>
 <dt><a class="reference external" href="https://github.com/nlambriICH">Nicola Lambri</a></dt><dd><ul>
 <li><p><a class="reference external" href="https://www.humanitas.net/">IRCCS Humanitas Research Hospital</a>, Italy</p></li>
 <li><p><a class="reference external" href="https://www.hunimed.eu/">Humanitas University</a>, Italy</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/crcrewso">Cody Crewson</a></dt><dd><ul>
+<li><p><a class="reference external" href="http://www.saskcancer.ca/">Saskatchewan Cancer Agency</a>, Canada</p></li>
 </ul>
 </dd>
 </dl>
